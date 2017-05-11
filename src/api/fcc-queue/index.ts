@@ -23,6 +23,7 @@ router.post('/', function(req, res) {
 		return new Promise((resolve, reject) => {
 			let submission = new Submission();
 			submission.data.filers[0].name = postData.fullname;
+			submission.data.contact_email = postData.email;
 			submission.data.addressentity.address_line_1 = postData.address;
 			submission.data.addressentity.address_line_2 = postData.address2;
 			submission.data.addressentity.city = postData.city;
